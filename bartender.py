@@ -17,6 +17,15 @@ ingredients = {
 }
 
 
+name = {
+    "mood":["happy","sad","angry","excited"],
+    "animal":["dog","bird","zebra","cat"]
+}
+
+
+
+
+
 def ask_flavor():
     """ask flavor and collect it"""
     preferences={}
@@ -36,8 +45,11 @@ def total_flavor(preferences):
         if prefer:
             drinks.append(random.choice(ingredients[flavor]))
     return drinks
+
+
+    
+
             
-        
     
 def main():
     preferences = ask_flavor()
@@ -46,6 +58,14 @@ def main():
     #print(drinks)
     for ingredient in drinks:
         print("A {}".format(ingredient))
+    #drink_name()
+    print("  ")
+    another_drink=input("Would you like one more drink?")
+    if another_drink.lower()=='y':
+        a=1
+        while a>0:
+            main()
+        
 
 if __name__ == "__main__":
     main()
