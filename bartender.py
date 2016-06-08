@@ -47,7 +47,10 @@ def total_flavor(preferences):
     return drinks
 
 
-    
+def drink_name():
+    """drink_name"""
+   
+    print("Your drink name is {0}{1}".format(random.choice(name['mood']),random.choice(name['animal'])))    
 
             
     
@@ -58,7 +61,7 @@ def main():
     #print(drinks)
     for ingredient in drinks:
         print("A {}".format(ingredient))
-    #drink_name()
+    drink_name()
     print("  ")
     another_drink=input("Would you like one more drink?")
     if another_drink.lower()=='y':
@@ -69,3 +72,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
+    
+    
